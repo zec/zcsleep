@@ -1,5 +1,5 @@
 CC=gcc
-COPTS=
+COPTS=-D_POSIX_C_SOURCE=200112L
 
 all: zcsleep
 
