@@ -1,1 +1,6 @@
+# Output
 /zcsleep
+# Editor tempfiles
+*.swp
+~*
+*~
