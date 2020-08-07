@@ -1,0 +1,25 @@
+= zcsleep
+:sleep-man: https://pubs.opengroup.org/onlinepubs/9699919799/utilities/sleep.html
+:clock-man: https://man7.org/linux/man-pages/man2/clock_getres.2.html
+
+`zcsleep` is a program that, like link:{sleep-man}[`sleep(1)`],
+takes a duration on the command line, then quietly waits for that amount of
+time before exiting.
+It is _unlike_ `sleep(1)` in that:
+
+* One can specify a particular link:{clock-man}[system clock]
+  to use for sleeping: `CLOCK_REALTIME`, `CLOCK_MONOTONIC`, etc.
+  This can be useful in the face
+  of clock adjustments, system suspends, and the like.
+* It is not as polished as `sleep(1)`: as it stands (August 2020), the basic
+  functionality works, and it should be robust against bad inputs, but the
+  user interface (especially the error reporting) isn't as friendly as it could
+  be. (The code could use better documentation, too.)
+
+As it stands, it's good enough for my (Zachary Catlin) purposes, but may not
+be ready for general usage. If someone wants to run with this idea and turn it
+into a better utility, or just finds it useful as-is, go for it, but this
+is not supported by me.
+
+It has been tested only on Linux, but should compile and run on recent
+POSIX-compliant systems with few or no changes.
