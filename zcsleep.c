@@ -1,3 +1,8 @@
+/*
+ * zcsleep - sleep for a given amount, using a non-default system clock
+ *
+ * Copyright (c) 2020 Zachary Catlin. See COPYING for terms.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
