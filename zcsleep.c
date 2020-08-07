@@ -56,8 +56,6 @@ int main(int argc, char **argv)
             return n - 1;
     }
 
-    printf("time to sleep: {%lld,%ld}\n", (long long) ts.tv_sec, ts.tv_nsec);
-
     return sleep_loop(clockid, &ts);
 }
 
